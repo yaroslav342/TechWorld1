@@ -14,6 +14,12 @@
     margin-right: 40px;
     position: relative;
     left: 100px;
+    cursor: pointer;
+}
+
+a:hover{
+    font-size: 22px;
+
 }
 
 .width_a{
@@ -109,9 +115,19 @@ main p{
     height: 200px;
     display: flex;
     flex-direction: row;
-
+    cursor: pointer;
 }
 
 .contacts p{
     color: white;
+}
+
+.span1{
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.price_cnt img{
+    cursor: pointer;
 }
