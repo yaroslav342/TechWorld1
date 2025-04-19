@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Ноутбук Acer Aspire 5 A515-57-59VX",
+        "price": 22999,
+        "image": "laptop2.png",
+        "description":  ""
+    },
+    {
+        "title": "Ноутбук HP Laptop Spruce Blue",
+        "price": 18999,
+        "image": "laptop3.png",
+        "description":   ""
+    },
+    {
+        "title": "Ноутбук Acer Nitro V 15 ANV15-51-5448",
+        "price": 34999,
+        "image": "laptop1.png",
+        "description":   ""
+    },
+    {
+        "title": "Ноутбук ASUS TUF Gaming A15 Jaeger Gray",
+        "price": 49999,
+        "image": "laptop4.png",
+        "description":   ""
+    },
+    {
+        "title": "Ноутбук Lenovo Cloud Grey",
+        "price": 17999,
+        "image": "laptop5.png",
+        "description":   ""
+    }
+    
+]

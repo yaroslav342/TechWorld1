@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Монітор 24 MSI G244F E2 -- Rapid IPS",
+        "price": 5228,
+        "image": "screen2.png",
+        "description":  ""
+    },
+    {
+        "title": "Монітор 27 MSI MAG 275QF - 2K QHD Rapid IPS",
+        "price": 8999,
+        "image": "screen3.png",
+        "description":   ""
+    },
+    {
+        "title": "Монітор 24.5 Lenovo Legion R25i-30",
+        "price": 6599,
+        "image": "screen4.png",
+        "description":   ""
+    },
+    {
+        "title": "Монітор 27 MSI MAG 274QRF-QD E2",
+        "price": 11999,
+        "image": "screen1.png",
+        "description":   ""
+    },
+    {
+        "title": "Монітор 27 Samsung Odyssey G7",
+        "price": 19499,
+        "image": "screen5.png",
+        "description":   ""
+    }
+    
+]
