@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Клавіатура бездротова AULA F75 Gas ket Reaper",
+        "price": 2499,
+        "image": "keyboard1.png",
+        "description":  ""
+    },
+    {
+        "title": "Клавіатура дротова HyperX Alloy Core RGB",
+        "price": 2073,
+        "image": "keyboard2.png",
+        "description":   ""
+    },
+    {
+        "title": "Клавіатура дротова Aula Wind Mechanica",
+        "price": 1199,
+        "image": "keyboard3.png",
+        "description":   ""
+    },
+    
+    {
+        "title": "Клавіатура бездро- това A4Tech Wireless Black",
+        "price": 949,
+        "image": "keyboard4.png",
+        "description":   ""
+    },
+    {
+        "title": "Клавіатура дротова OfficePro SK166 USB Black",
+        "price": 329,
+        "image": "keyboard5.png",
+        "description":   ""
+    }
+    
+]

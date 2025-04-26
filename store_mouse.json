@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Миша Logitech G102 Lightsync USB Black    ",
+        "price": 1449,
+        "image": "mouse1.png",
+        "description":  ""
+    },
+    {
+        "title": "Миша Razer DeathAdder Essential USB Black",
+        "price": 1399,
+        "image": "mouse2.png",
+        "description":   ""
+    },
+    {
+        "title": "Миша Rapoo 1620 Wireless Black",
+        "price": 349,
+        "image": "mouse3.png",
+        "description":   ""
+    },
+    {
+        "title": "Миша Logitech M170 Wireless",
+        "price": 469,
+        "image": "mouse4.png",
+        "description":   ""
+    },
+    {
+        "title": "Cherry Xtrfy Миша M42 WL/USB-A RGB білий",
+        "price": 4139,
+        "image": "mouse5.png",
+        "description":   ""
+    }
+    
+]

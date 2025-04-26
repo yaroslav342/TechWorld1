@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Мобільний телефон Samsung Galaxy A16 4",
+        "price": 6899,
+        "image": "phone2.png",
+        "description":  ""
+    },
+    {
+        "title": "Мобільний телефон Apple iPhone 13 128GB Midnight",
+        "price": 22499,
+        "image": "phone3.png",
+        "description":   ""
+    },
+    {
+        "title": "Мобільний телефон Redmi Note 14 Pro 8",
+        "price": 10999,
+        "image": "phone1.png",
+        "description":   ""
+    },
+    {
+        "title": "Мобільний телефон Xiaomi Redmi Note 14",
+        "price": 18999,
+        "image": "phone4.png",
+        "description":   ""
+    },
+    {
+        "title": "Мобільний телефон Apple iPhone 16e",
+        "price": 34999,
+        "image": "phone5.png",
+        "description":   ""
+    }
+    
+]
