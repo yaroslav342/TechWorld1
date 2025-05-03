@@ -15,7 +15,7 @@ function getCardHTMLLap(product) {
                 </p>
                 <div class="price_cnt">
                     <h2> ${product.price} ₴</h2>
-                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                    <button class="cart-btn" type="button"><img data-product='${productData}' src="img/cart.png" alt=""></button>
                 </div>
             </div>    
     `
@@ -29,7 +29,7 @@ getProductsLap().then(function(products) {
         })
     }
 
-    let buyButtons = document.querySelectorAll('.laptops .cart-btn')
+    let buyButtons = document.querySelectorAll('.cart-btn')
     if (buyButtons){
         buyButtons.forEach(function (button){
             button.addEventListener('click', addToCart)
@@ -54,7 +54,7 @@ function getCardHTMLScreen(product) {
                 </p>
                 <div class="price_cnt">
                     <h2> ${product.price} ₴</h2>
-                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                    <button class="cart-btn" type="button"><img data-product='${productData}' src="img/cart.png" alt=""></button>
                 </div>
             </div>    
     `
@@ -68,7 +68,7 @@ getProductsScreen().then(function(products) {
         })
     }
 
-    let buyButtons = document.querySelectorAll('.screen .cart-btn')
+    let buyButtons = document.querySelectorAll('.cart-btn')
     if (buyButtons){
         buyButtons.forEach(function (button){
             button.addEventListener('click', addToCart)
@@ -94,7 +94,7 @@ function getCardHTMLPhone(product) {
                 </p>
                 <div class="price_cnt">
                     <h2> ${product.price} ₴</h2>
-                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                    <button class="cart-btn" type="button"><img data-product='${productData}' src="img/cart.png" alt=""></button>
                 </div>
             </div>    
     `
@@ -108,7 +108,7 @@ getProductsPhone().then(function(products) {
         })
     }
 
-    let buyButtons = document.querySelectorAll('.phone .cart-btn')
+    let buyButtons = document.querySelectorAll('.cart-btn')
     if (buyButtons){
         buyButtons.forEach(function (button){
             button.addEventListener('click', addToCart)
@@ -133,7 +133,7 @@ function getCardHTMLKeyboard(product) {
                 </p>
                 <div class="price_cnt">
                     <h2> ${product.price} ₴</h2>
-                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                    <button class="cart-btn" type="button"><img data-product='${productData}' src="img/cart.png" alt=""></button>
                 </div>
             </div>    
     `
@@ -147,7 +147,7 @@ getProductsKeyboard().then(function(products) {
         })
     }
 
-    let buyButtons = document.querySelectorAll('.keyboard .cart-btn')
+    let buyButtons = document.querySelectorAll(' .cart-btn')
     if (buyButtons){
         buyButtons.forEach(function (button){
             button.addEventListener('click', addToCart)
@@ -173,7 +173,7 @@ function getCardHTMLMouse(product) {
                 </p>
                 <div class="price_cnt">
                     <h2> ${product.price} ₴</h2>
-                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                    <button class="cart-btn" type="button"><img data-product='${productData}' src="img/cart.png" alt=""></button>
                 </div>
             </div>    
     `
@@ -187,7 +187,7 @@ getProductsMouse().then(function(products) {
         })
     }
 
-    let buyButtons = document.querySelectorAll('.mouse .cart-btn')
+    let buyButtons = document.querySelectorAll(' .cart-btn')
     if (buyButtons){
         buyButtons.forEach(function (button){
             button.addEventListener('click', addToCart)
@@ -195,7 +195,7 @@ getProductsMouse().then(function(products) {
     }
 })
 
-const cartBtn = document.querySelector('.crt');
+const cartBtn = document.querySelector('.text-end img');
 
 // Навішуємо обробник подій на клік кнопки "Кошик"
 cartBtn.addEventListener("click", function () {
@@ -209,11 +209,12 @@ class ShoppingCart {
         this.items = {};
         this.cartCounter = document.querySelector('.cart-counter');// отримуємо лічильник кількості товарів у кошику
         this.cartElement = document.querySelector('#cart-items'); 
-        this.loadCartFromCookies(); // завантажуємо з кукі-файлів раніше додані в кошик товари
+        // this.loadCartFromCookies(); // завантажуємо з кукі-файлів раніше додані в кошик товари
     }
 
     // Додавання товару до кошика
     addItem(item) {
+        console.log(item);
         if (this.items[item.title]) {
             this.items[item.title].quantity += 1; // Якщо товар вже є, збільшуємо його кількість на одиницю
         } else {
@@ -242,7 +243,7 @@ class ShoppingCart {
         for (let key in this.items) { // проходимося по всіх ключах об'єкта this.items
             count += this.items[key].quantity; // рахуємо кількість усіх товарів
         }
-        this.cartCounter.innerHTML = count; // оновлюємо лічильник на сторінці
+        // this.cartCounter.innerHTML = count; // оновлюємо лічильник на сторінці
     }
 
     // Зберігання кошика в кукі
@@ -251,14 +252,14 @@ class ShoppingCart {
         document.cookie = `cart=${cartJSON}; max-age=${60 * 60 * 24 * 7}; path=/`;
     }
 
-    // Завантаження кошика з кукі
-    loadCartFromCookies() {
-        let cartCookie = getCookieValue('cart');
-        if (cartCookie && cartCookie !== '') {
-            this.items = JSON.parse(cartCookie);
-            this.updateCounter();
-        }
-    }
+    // // Завантаження кошика з кукі
+    // loadCartFromCookies() {
+    //     let cartCookie = getCookieValue('cart');
+    //     if (cartCookie && cartCookie !== '') {
+    //         this.items = JSON.parse(cartCookie);
+    //         this.updateCounter();
+    //     }
+    // }
     // Обчислення загальної вартості товарів у кошику
     calculateTotal() {
         let total = 0;
@@ -278,8 +279,9 @@ function addToCart(event) {
     // Отримуємо дані про товар з data-атрибута кнопки
     const productData = event.target.getAttribute('data-product');
     const product = JSON.parse(productData);
-
+    console.log(event.target);
     // Додаємо товар до кошика
     cart.addItem(product);
     console.log(cart);
 }
+
