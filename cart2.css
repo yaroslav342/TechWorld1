@@ -1,6 +1,6 @@
-.cart_products{
+.gik{
     background: rgba(217, 217, 217, 0.1);
-    width: 1250px;
+    width: 1150px;
     height: 500px;
     align-items: center;
     margin: 0 auto;
@@ -13,17 +13,14 @@
 
 }
  
-.p1{
+p{
     color: #ffffff;
     font-size: 26px;
 }
 
-.p1, img{
-
-}
-
 img{
     border-radius: 10px;
+    float: left;
 }
 
 .price{

@@ -18,7 +18,7 @@
         "description":   ""
     },
     {
-        "title": "Ноутбук ASUS TUF Gaming A15 Jaeger Gray",
+        "title": "Ноутбук ASUS TUF Gaming A15 Jaeger",
         "price": 49999,
         "image": "laptop4.png",
         "description":   ""
@@ -28,6 +28,130 @@
         "price": 17999,
         "image": "laptop5.png",
         "description":   ""
-    }
+    },
+
+    {
+        "title": "Клавіатура бездротова AULA F75 Gas ket ",
+        "price": 2499,
+        "image": "keyboard1.png",
+        "description":  ""
+    },
+    {
+        "title": "Клавіатура дротова HyperX Alloy Core RGB",
+        "price": 2073,
+        "image": "keyboard2.png",
+        "description":   ""
+    },
+    {
+        "title": "Клавіатура дротова Aula Wind Mechanica",
+        "price": 1199,
+        "image": "keyboard3.png",
+        "description":   ""
+    },
+        
+    {
+        "title": "Клавіатура бездро- това A4Tech Wireless",
+        "price": 949,
+        "image": "keyboard4.png",
+        "description":   ""
+    },
+    {
+        "title": "Клавіатура дротова OfficePro SK166 USB ",
+        "price": 329,
+        "image": "keyboard5.png",
+        "description":   ""
+    },
+
+    {
+        "title": "Миша Logitech G102 Lightsync USB Black    ",
+        "price": 1449,
+        "image": "mouse1.png",
+        "description":  ""
+    },
+    {
+        "title": "Миша Razer DeathAdder Essential USB Black",
+        "price": 1399,
+        "image": "mouse2.png",
+        "description":   ""
+    },
+    {
+        "title": "Миша Rapoo 1620 Wireless Black",
+        "price": 349,
+        "image": "mouse3.png",
+        "description":   ""
+    },
+    {
+        "title": "Миша Logitech M170 Wireless",
+        "price": 469,
+        "image": "mouse4.png",
+        "description":   ""
+    },
+    {
+        "title": "Cherry Xtrfy Миша M42 WL/USB-A RGB білий",
+        "price": 4139,
+        "image": "mouse5.png",
+        "description":   ""
+    },
+
+    {
+        "title": "Мобільний телефон Samsung Galaxy A16 4",
+        "price": 6899,
+        "image": "phone2.png",
+        "description":  ""
+    },
+    {
+        "title": "Мобільний телефон Apple iPhone 13 128GB ",
+        "price": 22499,
+        "image": "phone3.png",
+        "description":   ""
+    },
+    {
+        "title": "Мобільний телефон Redmi Note 14 Pro 8",
+        "price": 10999,
+        "image": "phone1.png",
+        "description":   ""
+    },
+    {
+        "title": "Мобільний телефон Xiaomi Redmi Note 14",
+        "price": 18999,
+        "image": "phone4.png",
+        "description":   ""
+    },
+    {
+        "title": "Мобільний телефон Apple iPhone 16e",
+        "price": 34999,
+        "image": "phone5.png",
+        "description":   ""
+    },
     
+    {
+        "title": "Монітор 24 MSI G244F E2 -- Rapid IPS",
+        "price": 5228,
+        "image": "screen2.png",
+        "description":  ""
+    },
+    {
+        "title": "Монітор 27 MSI MAG 275QF - 2K QHD Rapid ",
+        "price": 8999,
+        "image": "screen3.png",
+        "description":   ""
+    },
+    {
+        "title": "Монітор 24.5 Lenovo Legion R25i-30",
+        "price": 6599,
+        "image": "screen4.png",
+        "description":   ""
+    },
+    {
+        "title": "Монітор 27 MSI MAG 274QRF-QD E2",
+        "price": 11999,
+        "image": "screen1.png",
+        "description":   ""
+    },
+    {
+        "title": "Монітор 27 Samsung Odyssey G7",
+        "price": 19499,
+        "image": "screen5.png",
+        "description":   ""
+    }       
 ]
