@@ -4,10 +4,23 @@
 }
 
 button{
-    background: transparent;
+    background: none;
+    background-color: #1572a8;
+    border-radius: 5px;
+    border: solid gray 1.5px;
 }
 
-#items{
-    
+.Home{
+    position: relative;
+    bottom: 18px;
+
+}
+
+.price_cnt img:hover{
+    transition-property: background-color, border-radius, width;
+    background-color: #00ADB5;
+    width: 50px;
+    border-radius: 5px;
+    transition-duration: 0.5s;
 }
 

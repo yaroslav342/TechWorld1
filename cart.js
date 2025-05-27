@@ -6,15 +6,23 @@ let orderSection = document.querySelector(".order")
 console.log(cart)
 
 function get_item(item) {
-    return `<div class="gik">
-                <img src="img/${item.image}" class="gik_img">
-                <div class="gik_text">
-                    <p class="gik_h1">${item.title}</p>
-                    <p>Ціна за шт: ${item.price}$</p>
-                    <div class="gik-counter">Кількість:<div class="count"> <button class="gik_plus">+</button> <span class="qua">${item.quantity}</span> <button class="gik_minus">-</button></div></div>
+    return `
+    <div class="item">
+    <img src="img/${item.image}" class="cart-item-img" alt="${item.title}">
+                <div class="cart-item-details">
+                    <h3 class="cart-item-title">${item.title}</h3>
+                    <p class="cart-item-price">Ціна за шт: ${item.price} uah</p>
+                    <div class="cart-item-quantity">
+                        <span>Кількість:</span>
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <span class="quantity-value">${item.quantity}</span>
+                            <button class="quantity-btn plus-btn">+</button>
+                        </div>
+                    </div>
                 </div>
-                <button class="gik_del">✖</button>
-            </div>`
+                <button class="remove-btn">✖</button>
+    </div>`
 }
 
 function showCartList() {

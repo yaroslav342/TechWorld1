@@ -86,6 +86,7 @@ class ShoppingCart {
 
     // Додавання товару до кошика
     addItem(item) {
+        console.log(item);
         
         if (this.items[item.title]) {
             this.items[item.title].quantity += 1; // Якщо товар вже є, збільшуємо його кількість на одиницю
