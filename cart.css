@@ -8,6 +8,8 @@ button{
     background-color: #1572a8;
     border-radius: 5px;
     border: solid gray 1.5px;
+    transition: all 0.4s ease;
+
 }
 
 button:hover{

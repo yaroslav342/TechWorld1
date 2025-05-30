@@ -31,16 +31,14 @@ h1{
 a:hover{
     transition-property: font-size;
     font-size: 22.5px;
-    transition-duration: 0.3s
-    
+    transition-duration: 0.3s;
 }
 
 a{
-    transition-property: font-size, color;
-    font-size: 22px;
-    transition-duration: 0.3s;
+    transition: all 0.3s ease;
     position: relative;
     top: 20px;
+    font-size: 22px;
     
 }
 
