@@ -1,72 +1,200 @@
-/* Файл із спільними скриптами для всього сайту (анімації, меню, кошик) */
-
-// Функція для отримання значення кукі за ім'ям
-function getCookieValue(cookieName) {
-    // Розділяємо всі куки на окремі частини
-    const cookies = document.cookie.split(';');
-
-    // Шукаємо куки з вказаним ім'ям
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim(); // Видаляємо зайві пробіли
-
-        // Перевіряємо, чи починається поточне кукі з шуканого імені
-        if (cookie.startsWith(cookieName + '=')) {
-            // Якщо так, повертаємо значення кукі
-            return cookie.substring(cookieName.length + 1); // +1 для пропуску символу "="
-        }
-    }
-    // Якщо кукі з вказаним іменем не знайдено, повертаємо порожній рядок або можна повернути null
-    return '';
-}
-
-
-// Отримуємо дані про товари з JSON файлу
-async function getProducts() {
-    let response = await fetch("store_db.json");
-    let products = await response.json();
+async function getProductsLap() {
+    let responce = await fetch("store_db.json");
+    let products = await responce.json();
     return products;
 };
 
-// Генеруємо HTML-код для карточки товару
-function getCardHTML(product) {
-    // Створюємо JSON-строку з даними про товар і зберігаємо її в data-атрибуті
+function getCardHTMLLap(product) {
     let productData = JSON.stringify(product)
 
     return `
     <div class="item_card">
-    <img class="item" src="img/${product.image}" alt="">
-    <p>
-        ${product.title}
-    </p>
-    <div class="price_cnt">
-        <h2> ${product.price} ₴</h2>
-        <button class="cart-btn" type="button"><img data-product='${productData}' src="img/cart.png" alt=""></button>
-    </div>
-</div>    
-    `;
+                <img class="item" src="img/${product.image}" alt="">
+                <p>
+                    ${product.title}
+                </p>
+                <div class="price_cnt">
+                    <h2> ${product.price} ₴</h2>
+                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                </div>
+            </div>    
+    `
 }
 
-// Відображаємо товари на сторінці
-getProducts().then(function (products) {
-    let productsList = document.querySelector('.items')
+getProductsLap().then(function(products) {
+    let productsList = document.querySelector('.laptops')
     if (productsList) {
-        products.forEach(function (product) {
-            productsList.innerHTML += getCardHTML(product)
+        products.forEach(function(product){
+            productsList.innerHTML += getCardHTMLLap(product)
         })
     }
 
-    // Отримуємо всі кнопки "Купити" на сторінці
-    let buyButtons = document.querySelectorAll('.cart-btn');
-    // Навішуємо обробник подій на кожну кнопку "Купити"
-    if (buyButtons) {
-        buyButtons.forEach(function (button) {
-            button.addEventListener('click', addToCart);
+    let buyButtons = document.querySelectorAll('.laptops .cart-btn')
+    if (buyButtons){
+        buyButtons.forEach(function (button){
+            button.addEventListener('click', addToCart)
+        });
+    }
+})
+
+async function getProductsScreen() {
+    let responce = await fetch("store_screen.json");
+    let products = await responce.json();
+    return products;
+};
+
+function getCardHTMLScreen(product) {
+    let productData = JSON.stringify(product)
+
+    return `
+    <div class="item_card">
+                <img class="item" src="img/${product.image}" alt="">
+                <p>
+                    ${product.title}
+                </p>
+                <div class="price_cnt">
+                    <h2> ${product.price} ₴</h2>
+                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                </div>
+            </div>    
+    `
+}
+
+getProductsScreen().then(function(products) {
+    let productsList = document.querySelector('.screen')
+    if (productsList) {
+        products.forEach(function(product){
+            productsList.innerHTML += getCardHTMLScreen(product)
+        })
+    }
+
+    let buyButtons = document.querySelectorAll('.screen .cart-btn')
+    if (buyButtons){
+        buyButtons.forEach(function (button){
+            button.addEventListener('click', addToCart)
         });
     }
 })
 
 
-// Отримуємо кнопку "Кошик"
+async function getProductsPhone() {
+    let responce = await fetch("store_phone.json");
+    let products = await responce.json();
+    return products;
+};
+
+function getCardHTMLPhone(product) {
+    let productData = JSON.stringify(product)
+
+    return `
+    <div class="item_card">
+                <img class="item" src="img/${product.image}" alt="">
+                <p>
+                    ${product.title}
+                </p>
+                <div class="price_cnt">
+                    <h2> ${product.price} ₴</h2>
+                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                </div>
+            </div>    
+    `
+}
+
+getProductsPhone().then(function(products) {
+    let productsList = document.querySelector('.phone')
+    if (productsList) {
+        products.forEach(function(product){
+            productsList.innerHTML += getCardHTMLPhone(product)
+        })
+    }
+
+    let buyButtons = document.querySelectorAll('.phone .cart-btn')
+    if (buyButtons){
+        buyButtons.forEach(function (button){
+            button.addEventListener('click', addToCart)
+        });
+    }
+})
+
+async function getProductsKeyboard() {
+    let responce = await fetch("store_keyboard.json");
+    let products = await responce.json();
+    return products;
+};
+
+function getCardHTMLKeyboard(product) {
+    let productData = JSON.stringify(product)
+
+    return `
+    <div class="item_card">
+                <img class="item" src="img/${product.image}" alt="">
+                <p>
+                    ${product.title}
+                </p>
+                <div class="price_cnt">
+                    <h2> ${product.price} ₴</h2>
+                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                </div>
+            </div>    
+    `
+}
+
+getProductsKeyboard().then(function(products) {
+    let productsList = document.querySelector('.keyboard')
+    if (productsList) {
+        products.forEach(function(product){
+            productsList.innerHTML += getCardHTMLKeyboard(product)
+        })
+    }
+
+    let buyButtons = document.querySelectorAll('.keyboard .cart-btn')
+    if (buyButtons){
+        buyButtons.forEach(function (button){
+            button.addEventListener('click', addToCart)
+        });
+    }
+})
+
+
+async function getProductsMouse() {
+    let responce = await fetch("store_mouse.json");
+    let products = await responce.json();
+    return products;
+};
+
+function getCardHTMLMouse(product) {
+    let productData = JSON.stringify(product)
+
+    return `
+    <div class="item_card">
+                <img class="item" src="img/${product.image}" alt="">
+                <p>
+                    ${product.title}
+                </p>
+                <div class="price_cnt">
+                    <h2> ${product.price} ₴</h2>
+                    <button class=""cart-btn" type="button" data-product='${productData}'><img src="img/cart.png" alt=""></button>
+                </div>
+            </div>    
+    `
+}
+
+getProductsMouse().then(function(products) {
+    let productsList = document.querySelector('.mouse')
+    if (productsList) {
+        products.forEach(function(product){
+            productsList.innerHTML += getCardHTMLMouse(product)
+        })
+    }
+
+    let buyButtons = document.querySelectorAll('.mouse .cart-btn')
+    if (buyButtons){
+        buyButtons.forEach(function (button){
+            button.addEventListener('click', addToCart)
+        });
+    }
+})
+
 const cartBtn = document.querySelector('.crt');
 
 // Навішуємо обробник подій на клік кнопки "Кошик"
@@ -79,15 +207,13 @@ cartBtn.addEventListener("click", function () {
 class ShoppingCart {
     constructor() {
         this.items = {};
-        // this.cartCounter = document.querySelector('.cart-counter');// отримуємо лічильник кількості товарів у кошику
+        this.cartCounter = document.querySelector('.cart-counter');// отримуємо лічильник кількості товарів у кошику
         this.cartElement = document.querySelector('#cart-items'); 
         this.loadCartFromCookies(); // завантажуємо з кукі-файлів раніше додані в кошик товари
     }
 
     // Додавання товару до кошика
     addItem(item) {
-        console.log(item);
-        
         if (this.items[item.title]) {
             this.items[item.title].quantity += 1; // Якщо товар вже є, збільшуємо його кількість на одиницю
         } else {
@@ -100,10 +226,9 @@ class ShoppingCart {
 
     // Зміна кількості товарів товарів
     updateQuantity(itemTitle, newQuantity) {
-        console.log(itemTitle)
         if (this.items[itemTitle]) {
             this.items[itemTitle].quantity = newQuantity;
-            if (this.items[itemTitle].quantity <= 0) {
+            if (this.items[itemTitle].quantity == 0) {
                 delete this.items[itemTitle];
             }
             this.updateCounter();
@@ -117,7 +242,7 @@ class ShoppingCart {
         for (let key in this.items) { // проходимося по всіх ключах об'єкта this.items
             count += this.items[key].quantity; // рахуємо кількість усіх товарів
         }
-        // this.cartCounter.innerHTML = count; // оновлюємо лічильник на сторінці
+        this.cartCounter.innerHTML = count; // оновлюємо лічильник на сторінці
     }
 
     // Зберігання кошика в кукі

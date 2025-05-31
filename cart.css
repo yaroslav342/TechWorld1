@@ -4,34 +4,5 @@
 }
 
 button{
-    background: none;
-    background-color: #1572a8;
-    border-radius: 5px;
-    border: solid gray 1.5px;
-    transition: all 0.4s ease;
-
-}
-
-button:hover{
-    transition-property: background-color;
-    background-color: #00ADB5;
-    transition-duration: 0.5s;
-}
-
-.Home{
-    position: relative;
-    bottom: 18px;
-
-}
-
-
-
-.items{
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    padding-bottom: 150px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap:25px;
+    background: transparent;
 }
